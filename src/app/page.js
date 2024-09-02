@@ -75,8 +75,8 @@ export default function Home() {
                     animate={{opacity: 1, y: 0}}
                     transition={{duration: 0.5}}
                 >
-                    <h2 className="text-4xl font-semibold text-white">My Projects</h2>
-                    <p className="mt-4 text-xl text-white">Here are some of my recent works...</p>
+                    <h2 className="text-4xl font-semibold text-white mt-14">My Projects</h2>
+                    <p className="my-4 text-xl text-white">Here are some of my recent works...</p>
 
                     <div className="flex justify-around bg-gray-700">
                         <div className="rounded-2xl bg-white w-96 h-52 flex justify-center items-center m-14">
