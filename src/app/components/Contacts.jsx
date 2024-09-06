@@ -8,7 +8,7 @@ export default function Contacts() {
                 animate={{opacity: 1, x: 0}}
                 transition={{duration: 0.5}}
             >
-                <h2 className="text-4xl font-semibold text-white">Let's Connect!</h2>
+                <h2 className="text-4xl font-semibold text-white">Let&apos;s Connect!</h2>
                 <p className="mt-4 text-xl text-white">
                     LinkedIn, Github, Email, Resume
                     Contact me!
