@@ -25,7 +25,6 @@ export default function HomePage() {
                             to make the world a better place!
                         </p>
                     </div>
-
                 </div>
 
             </motion.div>

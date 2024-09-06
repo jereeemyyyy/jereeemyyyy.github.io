@@ -13,7 +13,8 @@
     "next": "14.2.7",
     "react": "^18",
     "react-dom": "^18",
-    "react-social-icons": "^6.18.0"
+    "react-social-icons": "^6.18.0",
+    "tech-stack-icons": "^2.1.0"
   },
   "devDependencies": {
     "eslint": "^8",
