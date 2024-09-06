@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function HomePage() {
     return (
@@ -11,7 +12,9 @@ export default function HomePage() {
             >
                 <div className="flex justify-center mb-6">
                     <div className="w-96 h-96 rounded-full overflow-hidden border-4 border-white">
-                        <img
+                        <Image
+                            width={5000}
+                            height={5000}
                             src="/me.png"
                             alt="Jeremy"
                             className="w-full h-full object-cover"
