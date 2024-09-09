@@ -3,7 +3,7 @@ import StackIcon from "tech-stack-icons";
 
 export default function AboutMe() {
     return (
-        <div id="about" className="min-h-screen flex items-center justify-center bg-black">
+        <div id="about" className="min-h-screen flex items-center justify-center">
             <motion.div
                 initial={{opacity: 0, x: -100}}
                 animate={{opacity: 1, x: 0}}

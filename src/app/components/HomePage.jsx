@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function HomePage() {
     return (
-        <div id="home" className="min-h-screen flex items-center justify-center bg-black">
+        <div id="home" className="min-h-screen flex items-center justify-center">
             <motion.div
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}

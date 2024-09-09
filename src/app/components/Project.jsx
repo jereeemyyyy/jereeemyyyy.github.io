@@ -4,7 +4,7 @@ import StackIcon from "tech-stack-icons";
 
 export default function Project() {
     return (
-        <div id="projects" className="min-h-screen flex items-center justify-center bg-black">
+        <div id="projects" className="min-h-screen flex items-center justify-center">
             <motion.div
                 initial={{opacity: 0, y: 50}}
                 animate={{opacity: 1, y: 0}}

@@ -2,7 +2,7 @@ import {motion} from "framer-motion";
 
 export default function Contacts() {
     return (
-        <div id="contacts" className="min-h-screen flex items-center justify-center bg-black">
+        <div id="contacts" className="min-h-screen flex items-center justify-center">
             <motion.div
                 initial={{opacity: 0, x: -100}}
                 animate={{opacity: 1, x: 0}}
