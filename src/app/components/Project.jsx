@@ -37,13 +37,13 @@ export default function Project() {
                         </div>
                     </div>
 
-                    <div className="bg-zinc-950 w-full max-w-sm rounded-2xl -ml-4 mr-4">
+                    <div className="bg-zinc-950 w-full max-w-sm rounded-2xl -ml-4 mr-4 relative">
                         <p className="p-4 text-center font-bold text-2xl mt-4 rounded-2xl"> SaveLah </p>
                         <p className="p-4  bg-zinc-900 rounded-2xl">
                             A simple financial tracker app that streamlines the process of tracking your expenses by
                             providing real time updates of your transactions.
                         </p>
-                        <div className="mt-16 mx-2 flex justify-end">
+                        <div className="flex justify-end absolute bottom-4 right-4">
                             <SocialIcon url={"https://github.com/jereeemyyyy/savelah-project"}/>
                         </div>
                     </div>
@@ -67,14 +67,14 @@ export default function Project() {
                         </div>
                     </div>
 
-                    <div className="bg-zinc-950 w-full max-w-sm rounded-2xl -ml-4 mr-4">
+                    <div className="bg-zinc-950 w-full max-w-sm rounded-2xl -ml-4 mr-4 relative">
                         <p className="p-4 text-center font-bold text-2xl mt-4 rounded-2xl"> CryptoPalace </p>
-                        <p className="p-4  bg-zinc-900 rounded-2xl">
+                        <p className="p-4  bg-zinc-900 rounded-2xl absolute">
                             A website that tracks the prices of all the cryptocurrencies and provided relevant
                             information about the currencies. The CoinGecko API was used in this project to
                             retrieve real time data of the cryptocurrencies.
                         </p>
-                        <div className="mt-16 mx-2 flex justify-end">
+                        <div className="flex justify-end absolute bottom-4 right-4">
                             <SocialIcon url={"https://github.com/jereeemyyyy/cryptopalace"}/>
                         </div>
                     </div>
@@ -103,13 +103,13 @@ export default function Project() {
                         </div>
                     </div>
 
-                    <div className="bg-zinc-950 w-full max-w-sm rounded-2xl -ml-4 mr-4">
+                    <div className="bg-zinc-950 w-full max-w-sm rounded-2xl -ml-4 mr-4 relative">
                         <p className="p-4 text-center font-bold text-2xl mt-4 rounded-2xl"> Simple Web Forum </p>
                         <p className="p-4  bg-zinc-900 rounded-2xl">
                             A simple web forum page that contains basic CRUD functionalities, that allows user
                             to create, remove, update and delete posts. My first ever project!
                         </p>
-                        <div className="mt-16 mx-2 flex justify-end">
+                        <div className="flex justify-end absolute bottom-4 right-4">
                             <SocialIcon url={"https://github.com/jereeemyyyy/savelah-project"}/>
                         </div>
                     </div>
