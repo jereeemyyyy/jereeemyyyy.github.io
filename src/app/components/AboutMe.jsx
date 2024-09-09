@@ -23,7 +23,7 @@ export default function AboutMe() {
                     <h3 className="text-2xl font-semibold text-white mt-4">Tech Stack:</h3>
                     {/* Tech stack icons */}
                     <div
-                        className="justify-center px-8 py-4 flex flex-wrap gap-6 mt-4 bg-gray-900 rounded-3xl max-w-2xl">
+                        className="justify-center px-8 py-4 flex flex-wrap gap-6 mt-4 bg-zinc-900 rounded-3xl max-w-2xl shadow-2xl">
                         <div className="flex flex-col items-center">
                             <StackIcon name="java" className="m-2 p-1 w-14 h-14 rounded-xl bg-white"/>
                         </div>

@@ -14,13 +14,13 @@ export default function Project() {
                 <h2 className="text-4xl font-semibold text-white mt-20">My Projects</h2>
                 <p className="my-4 text-xl text-white">Here are some of my recent works...</p>
 
-                <div className="flex justify-around bg-zinc-950 max-w-4xl rounded-2xl">
+                <div className="flex justify-around bg-zinc-950 max-w-4xl rounded-2xl shadow-2xl">
                     <div className=" w-3/5 items-center">
                         <div className="rounded-2xl bg-white w-96 h-52 flex justify-center items-center m-8">
                             <p className="text-black">Project #1</p>
                         </div>
 
-                        <div className="flex mx-14 -mt-2 mb-6 bg-zinc-900 rounded-2xl px-6 py-4 justify-around">
+                        <div className="flex mx-14 -mt-2 mb-6 bg-zinc-900 rounded-2xl px-6 py-4 justify-around shadow-2xl">
                             <div className="flex items-center">
                                 <StackIcon name="reactjs" className="my-1 mx-2 p-1 w-10 h-10 rounded-xl bg-white"/>
                             </div>
@@ -51,13 +51,13 @@ export default function Project() {
                 </div>
 
                 {/*Second project card*/}
-                <div className="flex justify-around bg-zinc-950 max-w-4xl rounded-2xl mt-10">
+                <div className="flex justify-around bg-zinc-950 max-w-4xl rounded-2xl mt-10 shadow-2xl">
                     <div className=" w-3/5 items-center">
                         <div className="rounded-2xl bg-white w-96 h-52 flex justify-center items-center m-8">
                             <p className="text-black">Project #2</p>
                         </div>
 
-                        <div className="flex mx-14 -mt-2 mb-6 bg-zinc-900 rounded-2xl px-6 py-4 justify-start">
+                        <div className="flex mx-14 -mt-2 mb-6 bg-zinc-900 rounded-2xl px-6 py-4 justify-start shadow-2xl">
                             <div className="flex items-center">
                                 <StackIcon name="reactjs" className="my-1 mx-2 p-1 w-10 h-10 rounded-xl bg-white"/>
                             </div>
@@ -81,13 +81,13 @@ export default function Project() {
                 </div>
 
                 {/*Third project card*/}
-                <div className="flex justify-around bg-zinc-950 max-w-4xl rounded-2xl mt-10">
+                <div className="flex justify-around bg-zinc-950 max-w-4xl rounded-2xl mt-10 shadow-2xl">
                     <div className=" w-3/5 items-center">
                         <div className="rounded-2xl bg-white w-96 h-52 flex justify-center items-center m-8">
                             <p className="text-black">Project #3</p>
                         </div>
 
-                        <div className="flex mx-14 -mt-2 mb-6 bg-zinc-900 rounded-2xl px-6 py-4 justify-around">
+                        <div className="flex mx-14 -mt-2 mb-6 bg-zinc-900 rounded-2xl px-6 py-4 justify-around shadow-2xl">
                             <div className="flex items-center">
                                 <StackIcon name="reactjs" className="my-1 mx-2 p-1 w-10 h-10 rounded-xl bg-white"/>
                             </div>
