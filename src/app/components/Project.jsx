@@ -4,14 +4,14 @@ import StackIcon from "tech-stack-icons";
 
 export default function Project() {
     return (
-        <div id="projects" className="min-h-screen flex items-center justify-center">
+        <div id="projects" className="min-h-screen flex items-center justify-center mb-28">
             <motion.div
                 initial={{opacity: 0, y: 50}}
                 animate={{opacity: 1, y: 0}}
                 transition={{duration: 0.5}}
             >
                 {/*First project card*/}
-                <h2 className="text-4xl font-semibold text-white mt-14">My Projects</h2>
+                <h2 className="text-4xl font-semibold text-white mt-20">My Projects</h2>
                 <p className="my-4 text-xl text-white">Here are some of my recent works...</p>
 
                 <div className="flex justify-around bg-zinc-950 max-w-4xl rounded-2xl">

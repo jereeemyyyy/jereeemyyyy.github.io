@@ -43,10 +43,6 @@ export default function AboutMe() {
                         <div className="flex flex-col items-center">
                             <StackIcon name="tailwindcss" className="m-2 p-1 w-14 h-14 rounded-xl bg-white"/>
                         </div>
-
-                        <div className="flex flex-col items-center">
-                            <StackIcon name="" className="m-2 p-1 w-14 h-14 rounded-xl bg-white"/>
-                        </div>
                     </div>
                 </div>
 

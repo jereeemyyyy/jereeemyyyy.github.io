@@ -22,9 +22,9 @@ export default function HomePage() {
                     </div>
 
                     <div className="mt-6 ml-8 flex flex-col items-center justify-center">
-                        <h1 className="text-6xl font-bold text-white self-start">Hello. I am Jeremy! </h1>
-                        <p className="mt-6 text-xl text-white self-start max-w-xl">
-                            an aspiring Full Stack Software engineer who is passionate about building softwares
+                        <h1 className="text-6xl font-bold text-white self-start">Hello. I am Jeremy 👋🏻</h1>
+                        <p className="mt-6 text-xl text-white self-center  max-w-xl">
+                            an aspiring Full Stack Software engineer who is passionate about building software
                             to make the world a better place!
                         </p>
                     </div>
