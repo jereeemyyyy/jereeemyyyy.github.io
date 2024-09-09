@@ -10,9 +10,13 @@ export default function AboutMe() {
                 transition={{duration: 0.5}}
             >
                 <h2 className="text-4xl font-semibold text-white">About Me</h2>
-                <p className="mt-4 text-xl text-white max-w-4xl bg-gray-400">
-                    I am Jeremy, a Computer Science Undergraduate from the National University of Singapore.
-                    I am a passionate developer...
+                <p className="mt-4 text-xl text-white max-w-4xl">
+                    I am currently a second-year Computer Science undergraduate at the National University of Singapore,
+                    passionate about building software that can make a positive impact in the world.
+                    With experience in both React Native for mobile applications and React.js for web applications,
+                    I enjoy creating innovative and efficient solutions. Outside of programming,
+                    I love staying active through exercise, playing basketball,
+                    and exploring new places whenever I get the chance
                 </p>
 
                 <div className="mt-20">
