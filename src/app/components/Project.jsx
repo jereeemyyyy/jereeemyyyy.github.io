@@ -1,6 +1,7 @@
 import {motion} from "framer-motion";
 import {SocialIcon} from "react-social-icons";
 import StackIcon from "tech-stack-icons";
+import Image from 'next/image';
 
 export default function Project() {
     return (
@@ -17,10 +18,17 @@ export default function Project() {
                 <div className="flex justify-around bg-zinc-950 max-w-4xl rounded-2xl shadow-2xl">
                     <div className=" w-3/5 items-center">
                         <div className="rounded-2xl bg-white w-96 h-52 flex justify-center items-center m-8">
-                            <p className="text-black">Project #1</p>
+                            {/*<p className="text-black">Project #1</p>*/}
+                            <Image src="/savelah2.png"
+                                   alt="Project Screenshot"
+                                   width={800}
+                                   height={500}
+                                   className="object-cover w-full h-full rounded-2xl"/>
+
                         </div>
 
-                        <div className="flex mx-14 -mt-2 mb-6 bg-zinc-900 rounded-2xl px-6 py-4 justify-around shadow-2xl">
+                        <div
+                            className="flex mx-14 -mt-2 mb-6 bg-zinc-900 rounded-2xl px-6 py-4 justify-around shadow-2xl">
                             <div className="flex items-center">
                                 <StackIcon name="reactjs" className="my-1 mx-2 p-1 w-10 h-10 rounded-xl bg-white"/>
                             </div>
@@ -54,11 +62,18 @@ export default function Project() {
                 <div className="flex justify-around bg-zinc-950 max-w-4xl rounded-2xl mt-10 shadow-2xl">
                     <div className=" w-3/5 items-center">
                         <div className="rounded-2xl bg-white w-96 h-52 flex justify-center items-center m-8">
-                            <p className="text-black">Project #2</p>
+                            {/*<p className="text-black">Project #2</p>*/}
+                            <Image src="/cryptopalace.png"
+                                   alt="Project Screenshot"
+                                   width={800}
+                                   height={500}
+                                   className="object-cover w-full h-full rounded-2xl"/>
+
                         </div>
 
-                        <div className="flex mx-14 -mt-2 mb-6 bg-zinc-900 rounded-2xl px-6 py-4 justify-start shadow-2xl">
-                            <div className="flex items-center">
+                        <div
+                            className="flex mx-14 -mt-2 mb-6 bg-zinc-900 rounded-2xl px-6 py-4 justify-start shadow-2xl">
+                        <div className="flex items-center">
                                 <StackIcon name="reactjs" className="my-1 mx-2 p-1 w-10 h-10 rounded-xl bg-white"/>
                             </div>
                             <div className="flex flex-col">
@@ -107,10 +122,10 @@ export default function Project() {
                         <p className="p-4 text-center font-bold text-2xl mt-4 rounded-2xl"> Simple Web Forum </p>
                         <p className="p-4  bg-zinc-900 rounded-2xl">
                             A simple web forum page that contains basic CRUD functionalities, that allows user
-                            to create, remove, update and delete posts. My first ever project!
+                            to create, read, update and delete posts. My first ever project!
                         </p>
                         <div className="flex justify-end absolute bottom-4 right-4">
-                            <SocialIcon url={"https://github.com/jereeemyyyy/savelah-project"}/>
+                            <SocialIcon url={"https://github.com/jereeemyyyy/CVWO-Frontend"}/>
                         </div>
                     </div>
 
