@@ -4,7 +4,7 @@ const projectsData = [
         description: "An application that assist Financial Advisors in tracking the details of their clients by providing " +
           "a platform to store and manage their clients' information.",
         imageSrc: "",
-        techStack: ["java", "javafx", "github", "gradlew"],
+        techStack: ["java", "github"],
         githubUrl: "https://github.com/jereeemyyyy/tp",
 
     },

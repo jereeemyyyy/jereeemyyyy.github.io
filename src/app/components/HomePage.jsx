@@ -32,7 +32,7 @@ export default function HomePage() {
 
                     <div className="mt-6 ml-8 flex flex-col items-center justify-center">
                         <h1 className="text-6xl font-bold text-white self-start">
-                            <span className="inline-block w-[750px] text-left">Hello. {text}<Cursor/></span>
+                            <span className="inline-block w-[750px] text-left">Hello! {text}<Cursor/></span>
                             <span className="-ml-16">👋🏻</span>
                         </h1>
                         <p className="mt-6 text-xl text-white self-center  max-w-xl">
