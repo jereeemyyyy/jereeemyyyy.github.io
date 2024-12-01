@@ -2,7 +2,7 @@
 
 This is the repository for my personal website. It is still work in progress! 
 
-## Introduction :
+## Introduction 
 
 Hello! My name is Jeremy, a Computer Science student studying at the National University Of Singapore. I am passionate about technology and I love to learn new things. I am currently learning web development and I am building this website to showcase my projects and skill set!
 
