@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { SocialIcon } from "react-social-icons";
 import StackIcon from "tech-stack-icons";
 import Image from "next/image";
-import projectsData from "../utils/projectsData";
+import projectsData from "../utils/ProjectsData";
 
 export default function Project() {
     return (
