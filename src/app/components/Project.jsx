@@ -4,6 +4,7 @@ import StackIcon from "tech-stack-icons";
 import Image from "next/image";
 import projectsData from "../utils/ProjectsData";
 
+
 export default function Project() {
     return (
         <div id="projects" className="min-h-screen flex items-center justify-center mb-28">
