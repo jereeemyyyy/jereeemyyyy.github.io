@@ -5,7 +5,7 @@ import { useTypewriter, Cursor } from 'react-simple-typewriter';
 export default function HomePage() {
 
     const [text] = useTypewriter({
-        words: ['I am Jeremy'],
+        words: ['I am Jeremy.'],
         loop: {},
         deleteSpeed: 70,
         typeSpeed: 120
@@ -31,11 +31,13 @@ export default function HomePage() {
                     </div>
 
                     <div className="mt-6 ml-8 flex flex-col items-center justify-center">
-                        <h1 className="text-6xl font-bold text-white self-start">
-                            <span className="inline-block w-[750px] text-left">Hello! {text}<Cursor/></span>
-                            <span className="-ml-16">👋🏻</span>
+                        <h1 className="-mr-44 text-6xl font-bold text-white text-left w-[800px]">
+                            <div className="mb-2">Hello <span className="-ml-5">👋🏻</span></div>
+                            <div>
+                                <span className="text-8xl">{text}</span><Cursor/>
+                            </div>
                         </h1>
-                        <p className="mt-6 text-xl text-white self-center  max-w-xl">
+                        <p className="-ml-10 mt-6 text-xl text-white self-center text-left  max-w-xl">
                             an aspiring Full Stack Software engineer who is passionate about building software
                             to make the world a better place!
                         </p>
