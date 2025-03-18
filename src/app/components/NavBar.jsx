@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useMotionValue } from "framer-motion";
 
 export default function NavBar() {
@@ -7,8 +7,10 @@ export default function NavBar() {
 
     const scrollToSection = (id) => {
         const element = document.getElementById(id);
-        if (element) {
-            const top = element.getBoundingClientRect().top + window.pageYOffset;
+        const navbar = document.querySelector('nav');
+        if (element && navbar) {
+            const navbarHeight = navbar.offsetHeight;
+            const top = element.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
             window.scrollTo({ top, behavior: 'smooth' });
             setActiveSection(id);
         }
@@ -22,21 +24,23 @@ export default function NavBar() {
     ];
 
     return (
-        <nav className="fixed top-0 w-full bg-zinc-950 shadow-2xl z-50">
-            <ul className="flex justify-end p-4">
-                {navItems.map((item) => (
-                    <li key={item.id}>
-                        <a
-                            onClick={() => scrollToSection(item.id)}
-                            className={`text-white font-bold m-6 cursor-pointer hover:text-gray-400 transition-colors duration-200 ${
-                                activeSection === item.id ? 'text-gray-400' : ''
-                            }`}
-                        >
-                            {item.label}
-                        </a>
-                    </li>
-                ))}
-            </ul>
-        </nav>
+        <header className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full">
+            <nav className="bg-zinc-950 shadow-2xl z-50 rounded-full flex justify-center max-w-2xl mx-auto px-6 py-3 items-center">
+                <ul className="flex space-x-12 items-center py-2">
+                    {navItems.map((item) => (
+                        <li key={item.id}>
+                            <a
+                                onClick={() => scrollToSection(item.id)}
+                                className={`text-white font-bold cursor-pointer hover:text-gray-400 transition-colors duration-200 py-2 px-4 rounded-2xl ${
+                                    activeSection === item.id ? 'text-gray-400 bg-gray-800 py-2 px-4 shadow-xl' : ''
+                                }`}
+                            >
+                                {item.label}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            </nav>
+        </header>
     );
 }
