@@ -3,7 +3,7 @@ import {SocialIcon} from "react-social-icons";
 
 export default function Contacts() {
     return (
-        <div id="contacts" className="min-h-screen flex items-center justify-center">
+        <div id="contacts" className="min-h-screen flex items-center justify-center mt-24">
             <motion.div
                 initial={{opacity: 0, x: -100}}
                 animate={{opacity: 1, x: 0}}

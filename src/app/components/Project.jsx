@@ -7,7 +7,7 @@ import projectsData from "../utils/ProjectsData";
 
 export default function Project() {
     return (
-        <div id="projects" className="min-h-screen flex items-center justify-center mb-28">
+        <div id="projects" className="min-h-screen flex items-center justify-center mb-28 mt-24">
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
