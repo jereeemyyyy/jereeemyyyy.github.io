@@ -16,6 +16,26 @@ export default function NavBar() {
         }
     };
 
+    // Function to update active section based on scroll position
+    useEffect(() => {
+        const handleScroll = () => {
+            const sections = document.querySelectorAll("section"); // Ensure each section has a <section> tag
+            let currentSection = "home";
+
+            sections.forEach((section) => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top <= 150 && rect.bottom >= 150) {
+                    currentSection = section.id;
+                }
+            });
+
+            setActiveSection(currentSection);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     const navItems = [
         { id: 'home', label: 'Home' },
         { id: 'about', label: 'About Me' },

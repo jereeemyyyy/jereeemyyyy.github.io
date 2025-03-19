@@ -4,7 +4,7 @@ import {SocialIcon} from "react-social-icons";
 export default function Contacts() {
     return (
         <>
-            <div id="contacts" className="py-60 flex items-center justify-center mt-24">
+            <section id="contacts" className="py-60 flex items-center justify-center mt-24">
                 <motion.div
                     initial={{opacity: 0, x: -100}}
                     animate={{opacity: 1, x: 0}}
@@ -24,7 +24,7 @@ export default function Contacts() {
                             </div>
                         </div>
                 </motion.div>
-            </div>
+            </section>
 
             
             <footer className="bg-zinc-950 text-white py-6 mt-16 shadow-lg rounded-3xl">
