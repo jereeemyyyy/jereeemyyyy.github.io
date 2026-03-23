@@ -1,71 +1,72 @@
 import { motion } from 'framer-motion'
-import { Badge } from '@/components/ui/Badge'
-import { skillCategories } from '@/data/skills'
+import {
+  SiReact,
+  SiGo,
+  SiPython,
+  SiTypescript,
+  SiExpress,
+  SiMongodb,
+  SiPostgresql,
+  SiSupabase,
+  SiSequelize,
+  SiDocker,
+  SiCircleci,
+} from 'react-icons/si'
+import { FaAws } from 'react-icons/fa'
+import type { IconType } from 'react-icons'
+
+const skills: { name: string; icon: IconType; color: string }[] = [
+  { name: 'React', icon: SiReact, color: '#61DAFB' },
+  { name: 'Go Lang', icon: SiGo, color: '#00ADD8' },
+  { name: 'Python', icon: SiPython, color: '#3776AB' },
+  { name: 'TypeScript', icon: SiTypescript, color: '#3178C6' },
+  { name: 'Express.js', icon: SiExpress, color: '#a0a0a0' },
+  { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
+  { name: 'PostgreSQL', icon: SiPostgresql, color: '#4169E1' },
+  { name: 'Supabase', icon: SiSupabase, color: '#3FCF8E' },
+  { name: 'Sequelize ORM', icon: SiSequelize, color: '#52B0E7' },
+  { name: 'Docker', icon: SiDocker, color: '#2496ED' },
+  { name: 'Circle CI', icon: SiCircleci, color: '#343434' },
+  { name: 'AWS ECS', icon: FaAws, color: '#FF9900' },
+  { name: 'ECR', icon: FaAws, color: '#FF9900' },
+  { name: 'RDS', icon: FaAws, color: '#FF9900' },
+  { name: 'Lambda', icon: FaAws, color: '#FF9900' },
+  { name: 'API Gateway', icon: FaAws, color: '#FF9900' },
+  { name: 'DynamoDB', icon: FaAws, color: '#FF9900' },
+  { name: 'Cognito', icon: FaAws, color: '#FF9900' },
+]
 
 export function Skills() {
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  }
-
-  const category = {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  }
-
-  const badge = {
-    hidden: { opacity: 0, scale: 0.8 },
-    show: { opacity: 1, scale: 1, transition: { duration: 0.3 } },
-  }
-
   return (
     <section id="skills" className="min-h-screen flex items-center py-32">
-      <div className="container mx-auto px-6 md:px-12 max-w-5xl">
+      <div className="container mx-auto px-6 md:px-12 max-w-4xl">
+        <h3 className="text-muted-foreground tracking-[0.3em] text-lg uppercase font-bold text-white mb-2">
+          Skills
+        </h3>
+        <div className="flex items-center gap-3 mb-12">
+          <div className="w-16 h-[1px] bg-gradient-to-r from-foreground/40 to-transparent" />
+        </div>
+
         <motion.div
-          initial="hidden"
-          whileInView="show"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
-          variants={container}
+          transition={{ duration: 0.5 }}
+          className="flex flex-wrap justify-center gap-3"
         >
-          {/* <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-4xl font-bold mb-12"
-          >
-            Skills
-          </motion.h2> */}
-
-          <h3 className="text-muted-foreground tracking-[0.3em] text-lg uppercase font-bold text-white mb-2">Skills</h3>
-            <div className="flex items-center gap-3 mb-2">
-              <div className="w-16 h-[1px] bg-gradient-to-r from-foreground/40 to-transparent"></div>
-            </div>    
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {skillCategories.map((cat) => (
-              <motion.div
-                key={cat.id}
-                variants={category}
-                className="space-y-4"
-              >
-                <h3 className="text-xl font-semibold mb-2">{cat.name}</h3>
-                <div className="flex flex-wrap gap-2">
-                  {cat.skills.map((skill) => (
-                    <motion.div key={skill} variants={badge}>
-                      <Badge variant="secondary" className="text-sm py-1 px-3">
-                        {skill}
-                      </Badge>
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
+          {skills.map(({ name, icon: Icon, color }, i) => (
+            <motion.span
+              key={name}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.25, delay: i * 0.03 }}
+              className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-secondary/60 border border-border/50 text-sm text-foreground tracking-wide"
+            >
+              <Icon size={18} color={color} />
+              {name}
+            </motion.span>
+          ))}
         </motion.div>
       </div>
     </section>

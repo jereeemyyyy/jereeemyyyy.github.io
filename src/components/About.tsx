@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { MapPin, Briefcase, Code } from 'lucide-react'
+import { MapPin, Briefcase, Code, Aperture, School} from 'lucide-react'
 
 export function About() {
   const container = {
@@ -43,7 +43,8 @@ export function About() {
               <p>
                 Currently, I'm focused on deepening my understanding of React, TypeScript, and server-side technologies. 
                 I enjoy tackling complex problems and turning ideas into functional, user-friendly solutions. 
-                When I'm not coding, you can find me exploring new tech trends or contributing to open-source projects.
+                When I'm not coding, you can find me exploring new tech trends or contributing to open-source projects, 
+                playing tennis, basketball or going to the gym.
               </p>
             </div>
           </motion.div>
@@ -59,12 +60,20 @@ export function About() {
                 <span>Singapore</span>
               </li>
               <li className="flex items-center gap-3 text-muted-foreground">
+                <School className="w-5 h-5 text-primary" />
+                <span>National University Of Singapore</span>
+              </li>
+              <li className="flex items-center gap-3 text-muted-foreground">
                 <Briefcase className="w-5 h-5 text-primary" />
                 <span>Open to new opportunities</span>
               </li>
               <li className="flex items-center gap-3 text-muted-foreground">
                 <Code className="w-5 h-5 text-primary" />
                 <span>Full Stack Development</span>
+              </li>
+              <li className="flex items-center gap-3 text-muted-foreground">
+                <Aperture className="w-5 h-5 text-primary" />
+                <span>Tennis Fanatic</span>
               </li>
             </ul>
           </motion.div>
