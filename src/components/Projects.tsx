@@ -5,7 +5,7 @@ export function Projects() {
   return (
     <section id="projects" className="min-h-screen py-32">
       <div className="container mx-auto px-6 md:px-12 max-w-6xl">
-        <h3 className="text-muted-foreground tracking-[0.3em] text-lg uppercase font-bold text-white mb-2">
+        <h3 className="text-muted-foreground tracking-[0.3em] text-lg uppercase font-bold text-foreground mb-2">
           Projects
         </h3>
         <div className="flex items-center gap-3 mb-8">
@@ -34,7 +34,7 @@ export function Projects() {
 
               {/* Title */}
               <h4
-                className="text-4xl md:text-5xl text-white mb-5 leading-[1.05]"
+                className="text-4xl md:text-5xl text-foreground mb-5 leading-[1.05]"
                 style={{ fontFamily: "'DM Serif Display', serif" }}
               >
                 {project.title}
@@ -55,12 +55,20 @@ export function Projects() {
                   </p>
                 </div>
 
-                {/* Image placeholder */}
+                {/* Image */}
                 <div className="relative px-4 pb-0">
                   <div className="rounded-t-lg overflow-hidden bg-black/20 aspect-[4/3] flex items-center justify-center transition-transform duration-500 group-hover:translate-y-[-4px]">
-                    <span className="text-white/30 text-sm tracking-widest uppercase">
-                      Project Image
-                    </span>
+                    {project.image ? (
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <span className="text-white/30 text-sm tracking-widest uppercase">
+                        Project Image
+                      </span>
+                    )}
                   </div>
                 </div>
               </a>

@@ -40,7 +40,7 @@ export function Skills() {
   return (
     <section id="skills" className="min-h-screen flex items-center py-32">
       <div className="container mx-auto px-6 md:px-12 max-w-4xl">
-        <h3 className="text-muted-foreground tracking-[0.3em] text-lg uppercase font-bold text-white mb-2">
+        <h3 className="text-muted-foreground tracking-[0.3em] text-lg uppercase font-bold text-foreground mb-2">
           Skills
         </h3>
         <div className="flex items-center gap-3 mb-12">

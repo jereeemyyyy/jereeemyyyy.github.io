@@ -44,6 +44,7 @@ export const projects: Project[] = [
     technologies: ['Java', 'JavaFX', 'Gradle'],
     color: '#5b7fb8',
     githubUrl: 'https://github.com/jereeemyyyy/tp',
+    image: '/ClientHub.png',
   },
   {
     id: 4,
@@ -53,8 +54,9 @@ export const projects: Project[] = [
       'A simple financial tracker app that streamlines the process of tracking your expenses by providing real time updates of your transactions',
     year: '2024',
     technologies: ['React Native', 'Supabase', 'TailwindCSS'],
-    color: '#5b7fb8',
+    color: '#7c5bbf',
     githubUrl: 'https://github.com/jereeemyyyy/savelah-project',
+    image: '/savelah2.png',
   },
   {
     id: 5,
@@ -64,8 +66,9 @@ export const projects: Project[] = [
       'A website that tracks the prices of all cryptocurrencies and provide relevant information about the currencies',
     year: '2024',
     technologies: ['React', 'CoinGecko API'],
-    color: '#5b7fb8',
+    color: '#c75a6a',
     githubUrl: 'https://github.com/jereeemyyyy/cryptopalace',
+    image: '/cryptopalace.png',
   },
   {
     id: 6,
@@ -75,7 +78,7 @@ export const projects: Project[] = [
       'A simple web forum page that contains basic CRUD functionalities for posts. My first every project!',
     year: '2023',
     technologies: ['Python', 'FastAPI', 'PostgreSQL'],
-    color: '#5b7fb8',
+    color: '#4a9e9e',
     githubUrl: 'https://github.com/jereeemyyyy/CVWO-Frontend',
   },
 ]

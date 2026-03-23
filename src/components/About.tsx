@@ -30,7 +30,7 @@ export function About() {
         >
           <motion.div variants={item}>
             {/* <h2 className="text-4xl font-bold mb-6 tracking-tight">About Me</h2> */}
-            <h3 className="text-muted-foreground tracking-[0.3em] text-lg uppercase font-bold text-white mb-2">About Me</h3>
+            <h3 className="text-muted-foreground tracking-[0.3em] text-lg uppercase font-bold text-foreground mb-2">About Me</h3>
             <div className="flex items-center gap-3 mb-2">
               <div className="w-16 h-[1px] bg-gradient-to-r from-foreground/40 to-transparent"></div>
             </div>
