@@ -4,28 +4,30 @@ export interface SkillCategory {
   skills: string[]
 }
 
-// ─────────────────────────────────────────────────────
-// Add your skills here, grouped by category.
-// ─────────────────────────────────────────────────────
 export const skillCategories: SkillCategory[] = [
   {
     id: 1,
-    name: 'Languages',
-    skills: ['TypeScript', 'JavaScript', 'Python', 'Java', 'SQL'],
+    name: 'Frontend',
+    skills: ['React'],
   },
   {
     id: 2,
-    name: 'Frontend',
-    skills: ['React', 'Next.js', 'Tailwind CSS', 'HTML & CSS', 'Framer Motion'],
+    name: 'Backend',
+    skills: ['Go Lang', 'Python', 'TypeScript', 'Express.js'],
   },
   {
     id: 3,
-    name: 'Backend',
-    skills: ['Node.js', 'Express', 'FastAPI', 'REST APIs', 'GraphQL'],
+    name: 'Database',
+    skills: ['MongoDB', 'PostgreSQL'],
   },
   {
     id: 4,
-    name: 'Tools & Platforms',
-    skills: ['Git', 'Docker', 'PostgreSQL', 'MongoDB', 'AWS'],
+    name: 'Tools',
+    skills: ['Supabase', 'Sequelize ORM', 'Docker', 'Circle CI'],
+  },
+  {
+    id: 5,
+    name: 'Cloud Services',
+    skills: ['AWS ECS', 'ECR', 'RDS', 'Lambda', 'API Gateway', 'DynamoDB', 'Cognito'],
   },
 ]

@@ -1,112 +1,92 @@
 import { motion } from 'framer-motion'
-import { ExternalLink, Github } from 'lucide-react'
-import { Badge } from '@/components/ui/Badge'
 import { projects } from '@/data/projects'
-import { cn } from '@/lib/utils'
 
 export function Projects() {
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  }
-
-  const card = {
-    hidden: { opacity: 0, y: 30 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-  }
-
   return (
-    <section id="projects" className="min-h-screen flex items-center py-32">
-      <div className="container mx-auto px-6 md:px-12 max-w-5xl">
-        <motion.div
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
-          variants={container}
-        >
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-4xl font-bold mb-12"
-          >
-            Featured Projects
-          </motion.h2>
+    <section id="projects" className="min-h-screen py-32">
+      <div className="container mx-auto px-6 md:px-12 max-w-6xl">
+        <h3 className="text-muted-foreground tracking-[0.3em] text-lg uppercase font-bold text-foreground mb-2">
+          Projects
+        </h3>
+        <div className="flex items-center gap-3 mb-8">
+          <div className="w-16 h-[1px] bg-gradient-to-r from-foreground/40 to-transparent"></div>
+        </div>  
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {projects.map((project) => (
-              <motion.div
-                key={project.id}
-                variants={card}
-                className={cn(
-                  "group relative flex flex-col justify-between overflow-hidden rounded-xl border border-border/50 bg-card/30 backdrop-blur-sm p-6 shadow-sm transition-shadow hover:shadow-md hover:bg-card/50",
-                  project.featured ? "md:col-span-2 md:flex-row md:items-start md:gap-8" : ""
-                )}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20">
+          {projects.map((project, index) => (
+            <motion.div
+              key={project.id}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              {/* Number + type label */}
+              <div className="flex items-center gap-4 mb-3">
+                <span className="text-muted-foreground text-sm tracking-[0.2em]">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <span className="w-10 h-[1px] bg-muted-foreground/40" />
+                <span className="text-muted-foreground text-xs tracking-[0.25em] uppercase">
+                  {project.type}
+                </span>
+              </div>
+
+              {/* Title */}
+              <h4
+                className="text-4xl md:text-5xl text-foreground mb-5 leading-[1.05]"
+                style={{ fontFamily: "'DM Serif Display', serif" }}
               >
-                <div className="flex-1 space-y-4">
-                  <div className="flex items-center justify-between">
-                    <div className="space-y-1">
-                      <h3 className="font-semibold text-xl tracking-tight text-foreground">
-                        {project.title}
-                      </h3>
-                      <p className="text-sm text-muted-foreground">{project.category}</p>
-                    </div>
-                    {project.year && (
-                      <Badge variant="outline" className="text-xs font-mono">
-                        {project.year}
-                      </Badge>
-                    )}
-                  </div>
+                {project.title}
+              </h4>
 
-                  <p className="text-muted-foreground leading-relaxed">
+              {/* Colored card */}
+              <a
+                href={project.liveUrl || project.githubUrl || '#'}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block rounded-2xl overflow-hidden group cursor-pointer"
+                style={{ backgroundColor: project.color }}
+              >
+                {/* Description */}
+                <div className="px-7 pt-7 pb-5">
+                  <p className="text-white/90 text-base leading-relaxed max-w-md">
                     {project.description}
                   </p>
+                </div>
 
-                  <div className="flex flex-wrap gap-2 pt-2">
-                    {project.technologies.map((tech) => (
-                      <Badge key={tech} variant="secondary" className="text-xs">
-                        {tech}
-                      </Badge>
-                    ))}
+                {/* Image */}
+                <div className="relative px-4 pb-0">
+                  <div className="rounded-t-lg overflow-hidden bg-black/20 aspect-[4/3] flex items-center justify-center transition-transform duration-500 group-hover:translate-y-[-4px]">
+                    {project.image ? (
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <span className="text-white/30 text-sm tracking-widest uppercase">
+                        Project Image
+                      </span>
+                    )}
                   </div>
                 </div>
+              </a>
 
-                <div className={cn(
-                  "flex items-center gap-4 mt-6",
-                  project.featured ? "md:mt-0 md:self-start" : ""
-                )}>
-                  {project.githubUrl && (
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-foreground transition-colors p-2 hover:bg-secondary rounded-full"
-                      aria-label="View Source"
-                    >
-                      <Github size={20} />
-                    </a>
-                  )}
-                  {project.liveUrl && (
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-foreground transition-colors p-2 hover:bg-secondary rounded-full"
-                      aria-label="View Live Site"
-                    >
-                      <ExternalLink size={20} />
-                    </a>
-                  )}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+              {/* Tech tags */}
+              <div className="flex flex-wrap gap-2.5 mt-5">
+                {project.technologies.map((tech) => (
+                  <span
+                    key={tech}
+                    className="text-[11px] tracking-[0.15em] uppercase px-3.5 py-1.5 rounded-full border border-border/60 text-muted-foreground"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   )

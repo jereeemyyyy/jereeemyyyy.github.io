@@ -25,14 +25,14 @@ export function Contact() {
 
           <div className="flex justify-center gap-6">
             <a
-              href="mailto:jeremy@example.com"
+              href="mailto:jeremyswz28@gmail.com"
               className="group p-4 bg-card/30 backdrop-blur-sm rounded-full shadow-sm hover:shadow-md transition-all hover:scale-105 border border-border/50"
               aria-label="Email Me"
             >
               <Mail className="w-6 h-6 text-foreground group-hover:text-primary transition-colors" />
             </a>
             <a
-              href="https://github.com/jeremysimwenze"
+              href="https://github.com/jereeemyyyy"
               target="_blank"
               rel="noopener noreferrer"
               className="group p-4 bg-card/30 backdrop-blur-sm rounded-full shadow-sm hover:shadow-md transition-all hover:scale-105 border border-border/50"
@@ -41,7 +41,7 @@ export function Contact() {
               <Github className="w-6 h-6 text-foreground group-hover:text-primary transition-colors" />
             </a>
             <a
-              href="https://linkedin.com/in/jeremysimwenze"
+              href="https://www.linkedin.com/in/jeremysimwenze/"
               target="_blank"
               rel="noopener noreferrer"
               className="group p-4 bg-card/30 backdrop-blur-sm rounded-full shadow-sm hover:shadow-md transition-all hover:scale-105 border border-border/50"

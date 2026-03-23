@@ -27,14 +27,19 @@ export function Experience() {
           viewport={{ once: true, amount: 0.2 }}
           variants={container}
         >
-          <motion.h2 
+          {/* <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="text-4xl font-bold mb-12"
-          >
+          > 
             Experience
-          </motion.h2>
+          </motion.h2> */}
+
+          <h3 className="text-muted-foreground tracking-[0.3em] text-lg uppercase font-bold text-foreground mb-2">Experience</h3>
+            <div className="flex items-center gap-3 mb-2">
+              <div className="w-16 h-[1px] bg-gradient-to-r from-foreground/40 to-transparent"></div>
+            </div>  
 
           <div className="relative border-l border-border ml-3 md:ml-6 space-y-12">
             {experiences.map((exp) => (
