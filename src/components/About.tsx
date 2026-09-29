@@ -1,83 +1,115 @@
-import { motion } from 'framer-motion'
-import { MapPin, Briefcase, Code, Aperture, School} from 'lucide-react'
+import type { CSSProperties, RefObject } from 'react'
+import { ABOUT_FACTS, ABOUT_PARAGRAPHS, STATEMENT } from '@/data/site'
+import portrait from '@/assets/me.jpg'
 
-export function About() {
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.3,
-      },
-    },
-  }
+const factLabel: CSSProperties = {
+  fontSize: 11,
+  letterSpacing: '.16em',
+  textTransform: 'uppercase',
+  color: '#6b6b6b',
+  lineHeight: '21px',
+}
 
-  const item = {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-  }
-
+function Portrait() {
   return (
-    <section id="about" className="min-h-screen flex items-center py-32">
-      <div className="container mx-auto px-6 md:px-12 max-w-5xl">
-        <motion.div
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
-          variants={container}
-          className="grid grid-cols-1 md:grid-cols-2 gap-12"
-        >
-          <motion.div variants={item}>
-            {/* <h2 className="text-4xl font-bold mb-6 tracking-tight">About Me</h2> */}
-            <h3 className="text-muted-foreground tracking-[0.3em] text-lg uppercase font-bold text-foreground mb-2">About Me</h3>
-            <div className="flex items-center gap-3 mb-2">
-              <div className="w-16 h-[1px] bg-gradient-to-r from-foreground/40 to-transparent"></div>
-            </div>
-            <div className="text-muted-foreground leading-relaxed space-y-4">
-              <p>
-                I'm Jeremy, an aspiring Full Stack Developer with a passion for building intuitive and performant web applications. 
-                My journey into software development started with a curiosity about how things work on the internet, 
-                and has evolved into a dedicated pursuit of mastering modern web technologies.
-              </p>
-              <p>
-                Currently, I'm focused on deepening my understanding of React, TypeScript, and server-side technologies. 
-                I enjoy tackling complex problems and turning ideas into functional, user-friendly solutions. 
-                When I'm not coding, you can find me exploring new tech trends or contributing to open-source projects, 
-                playing tennis, basketball or going to the gym.
-              </p>
-            </div>
-          </motion.div>
+    <img
+      src={portrait}
+      alt="Jeremy Sim"
+      loading="lazy"
+      decoding="async"
+      style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+    />
+  )
+}
 
-          <motion.div variants={item} className="bg-card/30 p-6 rounded-2xl border border-border/50 shadow-sm backdrop-blur-sm">
-            <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
-              <span className="w-2 h-2 bg-primary rounded-full" />
-              Quick Facts
-            </h3>
-            <ul className="space-y-4">
-              <li className="flex items-center gap-3 text-muted-foreground">
-                <MapPin className="w-5 h-5 text-primary" />
-                <span>Singapore</span>
-              </li>
-              <li className="flex items-center gap-3 text-muted-foreground">
-                <School className="w-5 h-5 text-primary" />
-                <span>National University Of Singapore</span>
-              </li>
-              <li className="flex items-center gap-3 text-muted-foreground">
-                <Briefcase className="w-5 h-5 text-primary" />
-                <span>Open to new opportunities</span>
-              </li>
-              <li className="flex items-center gap-3 text-muted-foreground">
-                <Code className="w-5 h-5 text-primary" />
-                <span>Full Stack Development</span>
-              </li>
-              <li className="flex items-center gap-3 text-muted-foreground">
-                <Aperture className="w-5 h-5 text-primary" />
-                <span>Tennis Fanatic</span>
-              </li>
-            </ul>
-          </motion.div>
-        </motion.div>
+interface AboutProps {
+  stmtRef: RefObject<HTMLParagraphElement | null>
+  photoRef: RefObject<HTMLDivElement | null>
+}
+
+export function About({ stmtRef, photoRef }: AboutProps) {
+  return (
+    <section id="about" style={{ padding: 'clamp(120px,18vh,200px) clamp(24px,8vw,120px)' }}>
+      <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+        <div
+          data-reveal="fade"
+          style={{ display: 'flex', gap: 14, fontSize: 12, letterSpacing: '.16em', textTransform: 'uppercase', color: '#6b6b6b' }}
+        >
+          <span>About</span>
+        </div>
+
+        <p
+          ref={stmtRef}
+          style={{
+            margin: '40px 0 0',
+            maxWidth: 1100,
+            display: 'flex',
+            flexWrap: 'wrap',
+            columnGap: '.25em',
+            fontFamily: "'DM Serif Display',serif",
+            fontSize: 'clamp(34px,4.6vw,68px)',
+            lineHeight: 1.12,
+            letterSpacing: '-.01em',
+          }}
+        >
+          {STATEMENT.split(' ').map((w, i) => (
+            <span key={`${w}-${i}`} data-w style={{ color: '#2c2c2c', transition: 'color .4s' }}>
+              {w}
+            </span>
+          ))}
+        </p>
+
+        <div
+          style={{
+            marginTop: 'clamp(80px,12vh,140px)',
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,320px),1fr))',
+            gap: 'clamp(40px,6vw,96px)',
+            alignItems: 'start',
+          }}
+        >
+          <div
+            data-reveal="clip"
+            style={{ position: 'relative', aspectRatio: '4/5', overflow: 'hidden', borderRadius: 4, background: '#141414' }}
+          >
+            <div ref={photoRef} style={{ position: 'absolute', inset: '-8% 0' }}>
+              <Portrait />
+            </div>
+          </div>
+
+          <div>
+            <div
+              data-reveal="up"
+              style={{ display: 'flex', flexDirection: 'column', gap: 18, fontSize: 15, lineHeight: 1.75, color: '#a0a0a0' }}
+            >
+              {ABOUT_PARAGRAPHS.map((p) => (
+                <p key={p} style={{ margin: 0, textWrap: 'pretty' }}>
+                  {p}
+                </p>
+              ))}
+            </div>
+
+            <div style={{ marginTop: 48, borderTop: '1px solid #222' }}>
+              {ABOUT_FACTS.map(([label, value]) => (
+                <div
+                  key={label}
+                  data-reveal="left"
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: '120px minmax(0,1fr)',
+                    gap: 16,
+                    padding: '16px 0',
+                    borderBottom: '1px solid #1c1c1c',
+                    fontSize: 14,
+                  }}
+                >
+                  <span style={factLabel}>{label}</span>
+                  <span>{value}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   )
